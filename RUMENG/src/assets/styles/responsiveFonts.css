@@ -1,0 +1,12 @@
+html {
+    font-size: 1.25vw;
+}
+
+
+/*当视口宽度小于600px时，执行以下CSS代码：*/
+@media (max-width: 600px) {
+    html {
+        font-size: 8px;
+    }
+
+}

@@ -34,17 +34,20 @@ let catalogs = ref([
 
 <template>
   <div class="container">
+    <!--    <div class="content">-->
+    <!--      <ul class="catalog">-->
+    <!--        <li class="catalogItem" v-for="(catalog, index) in catalogs" :key="index">-->
+    <!--          <h3>{{ catalog.catalog }}</h3>-->
+    <!--          <ul class="catalogLinks">-->
+    <!--            <li class="catalogLinksItem" v-for="(link, index) in catalog.links" :key="index">-->
+    <!--              <a :href="link.link">{{ link.title }}</a>-->
+    <!--            </li>-->
+    <!--          </ul>-->
+    <!--        </li>-->
+    <!--      </ul>-->
+    <!--    </div>-->
     <div class="content">
-      <ul class="catalog">
-        <li class="catalogItem" v-for="(catalog, index) in catalogs" :key="index">
-          <h3>{{ catalog.catalog }}</h3>
-          <ul class="catalogLinks">
-            <li class="catalogLinksItem" v-for="(link, index) in catalog.links" :key="index">
-              <a :href="link.link">{{ link.title }}</a>
-            </li>
-          </ul>
-        </li>
-      </ul>
+
     </div>
     <hr/>
     <div class="credits">
@@ -61,15 +64,18 @@ let catalogs = ref([
 
 <style scoped>
 .container {
+  border-top: 1px solid var(--bg-300);
+  overflow: hidden;
   width: auto;
   height: auto;
   background-color: var(--bg-200);
-  padding: 16px 80px;
+  padding: 1rem 5rem;
 }
 
 .content {
   width: 100%;
   height: auto;
+  display: grid;
 }
 
 .catalog {
@@ -104,19 +110,30 @@ let catalogs = ref([
 }
 
 .credits {
+  font-size: 0.9rem;
   width: 100%;
   height: auto;
   display: flex;
   justify-content: space-between;
 }
 
+
+@media (max-width: 600px) {
+  .credits {
+    flex-flow: column;
+    align-items: center;
+
+  }
+}
+
 .settings {
   list-style-type: none;
   display: flex;
+  padding: 0;
 }
 
 .settings a {
-  margin-right: 16px;
+  margin-right: 1rem;
   text-decoration: none;
   color: var(--text-200);
 }
