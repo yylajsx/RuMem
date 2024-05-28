@@ -70,6 +70,7 @@ let tabs = ref([{tab: "Games", link: "/"}, {tab: "Newswire", link: "/newswire"},
 
 .logo img {
   border-radius: 16px;
+  object-fit: fill;
 }
 
 .movingBar {
@@ -105,6 +106,7 @@ let tabs = ref([{tab: "Games", link: "/"}, {tab: "Newswire", link: "/newswire"},
   letter-spacing: 0.12rem;
   line-height: 1.5rem;
 }
+
 
 .tab a {
   text-decoration: none;

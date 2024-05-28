@@ -31,7 +31,6 @@ import {RouterView} from 'vue-router'
 header{
   width: 100vw;
   height:auto;
-  //overflow: hidden;
   background-color: var(--bg-200);
   border-bottom: 1px solid var(--bg-300);
   position: sticky;
@@ -39,11 +38,18 @@ header{
   z-index: 999;
 }
 
+@media (max-width: 400px) {
+  header {
+    overflow: hidden;
+  }
+}
+
 main{
   width: auto;
   min-height: calc(100vh - 6.5rem);
   overflow: hidden;
-  padding: 0.62rem 5rem;
+  //padding: 0.62rem 5rem;
+  padding: 0.62rem 0;
   background-color: var(--bg-100);
 }
 
