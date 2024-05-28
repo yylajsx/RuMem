@@ -3,7 +3,8 @@ import BarsIcon from "@/components/icons/IconBars.vue";
 import AvatarIcon from "@/components/icons/IconAvatar.vue";
 import {ref} from "vue";
 
-let logoSrc = ref("src/assets/images/logo.png")
+// let logoSrc = ref("src/assets/images/logo.png")
+let logoSrc = ref("../../public/logo.png")
 let tabs = ref([{tab: "Games", link: "/"}, {tab: "Newswire", link: "/newswire"}, {tab: "Downloads", link: "/downloads"}
   , {tab: "Store", link: "/store"}, {tab: "Support", link: "/support"}])
 
