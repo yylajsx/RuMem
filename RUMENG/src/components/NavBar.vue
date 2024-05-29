@@ -28,14 +28,12 @@ let tabs = ref([{tab: "Games", link: "/"}, {tab: "Newswire", link: "/newswire"},
     </div>
     <div class="actions">
       <div class="action">
-        <div class="dropdown">
-          <BarsIcon/>
-          <div class="dropdown-content">
-            <a href="#">HTML</a>
-            <a href="#">CSS</a>
-            <a href="#">Bootstrap</a>
-          </div>
-        </div>
+        <BarsIcon/>
+        <!--        <div class="dropdown-content">-->
+        <!--          <a href="#">HTML</a>-->
+        <!--          <a href="#">CSS</a>-->
+        <!--          <a href="#">Bootstrap</a>-->
+        <!--        </div>-->
       </div>
       <div class="action">
         <AvatarIcon/>
@@ -47,7 +45,7 @@ let tabs = ref([{tab: "Games", link: "/"}, {tab: "Newswire", link: "/newswire"},
 <style scoped>
 .container {
   width: auto;
-  height: 4.5rem;
+  height: 3rem;
   padding: 6px 5rem;
   display: flex;
   flex-flow: row nowrap;
@@ -71,6 +69,7 @@ let tabs = ref([{tab: "Games", link: "/"}, {tab: "Newswire", link: "/newswire"},
 }
 
 .logo img {
+  width: 3rem;
   border-radius: 16px;
   object-fit: fill;
 }
@@ -89,7 +88,7 @@ let tabs = ref([{tab: "Games", link: "/"}, {tab: "Newswire", link: "/newswire"},
 .tabs {
   position: relative;
   width: auto;
-  height: 4.5rem;
+  height: 3rem;
   margin-left: 2rem;
   display: flex;
   justify-content: flex-start;
@@ -99,7 +98,7 @@ let tabs = ref([{tab: "Games", link: "/"}, {tab: "Newswire", link: "/newswire"},
 
 .tab {
   width: auto;
-  height: 4.5rem;
+  height: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -112,7 +111,8 @@ let tabs = ref([{tab: "Games", link: "/"}, {tab: "Newswire", link: "/newswire"},
 
 .tab a {
   text-decoration: none;
-  color: var(--text-200);
+  //color: var(--text-000);
+  color: inherit;
 }
 
 .tab a:hover {
@@ -121,7 +121,7 @@ let tabs = ref([{tab: "Games", link: "/"}, {tab: "Newswire", link: "/newswire"},
 
 .actions {
   width: auto;
-  height: 4.5rem;
+  height: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -136,40 +136,10 @@ let tabs = ref([{tab: "Games", link: "/"}, {tab: "Newswire", link: "/newswire"},
 
 .action {
   margin: 0 0.5rem;
-  height: 4.5rem;
+  height: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  background-color: var(--bg-200);
-  min-width: 120px;
-}
-
-.dropdown-content a {
-  color: var(--text-200);
-  padding: 10px;
-  display: block;
-  text-align: left;
-  text-decoration: none;
-}
-
-.dropdown-content a:hover {
-  background-color: var(--bg-100);
-  color: var(--text-100);
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
 }
 
 </style>

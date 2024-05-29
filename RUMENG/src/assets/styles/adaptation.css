@@ -1,1 +1,8 @@
 @import "responsiveFonts.css";
+
+@media (max-width: 768px) {
+    html {
+        background-color: #ffffff;
+        color: var(--text-300);
+    }
+}

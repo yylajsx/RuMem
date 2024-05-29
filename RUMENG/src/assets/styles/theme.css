@@ -1,21 +1,28 @@
 :root {
-    /*background-color: #ffffff;*/
-    /*color: rgba(29, 33, 41, 1);*/
     --primary-100:#d4eaf7;
     --primary-200:#b6ccd8;
     --primary-300:#3b3c3d;
     --accent-100:#71c4ef;
     --accent-200:#00668c;
+    --text-000: #ffffff;
     --text-100:#00668c;
     --text-200:#1d1c1c;
     --text-300:#313d44;
     --bg-100:#fffefb;
     --bg-200:#f5f4f1;
     --bg-300:#cccbc8;
+    --bg-400: #999999;
+    --bg-500: #000000;
 }
 
-html[data-theme="dark"] {
+html {
+    color: var(--text-000);
+    background-color: var(--bg-500);
+}
 
+html[data-theme="light"] {
+    /*color: var(--text-300);*/
+    /*background-color: var(--bg-100);*/
 }
 
 
