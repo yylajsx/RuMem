@@ -1,6 +1,35 @@
 <script setup>
-function down(event) {
-  console.log(event)
+import {onMounted, ref} from "vue";
+import IconVolumeOn from "@/components/icons/IconVolumeOn.vue";
+
+const video = ref()
+const volume = ref()
+
+function playVideo() {
+  video.value.muted = true
+  video.value.play()
+  const ctx = new AudioContext()
+  //通过这个可以判断出视频能不能够自动播放 如何可以它的值就是“running” 否则为"suspended"
+  // 如果是不能播放我们就执行下面的逻辑，其实就是类似于第一种方法，让用户与其交互
+  const canAutoPlay = ctx.state === 'running';
+  console.log(canAutoPlay)
+  ctx.close();
+  if (canAutoPlay) {
+    video.value.muted = false;
+    volume.value.style.display = 'none';
+  } else {
+    volume.value.style.display = 'block';
+  }
+
+}
+
+onMounted(() => {
+  playVideo()
+})
+
+function pauseVideo() {
+  video.value.pause()
+
 }
 </script>
 
@@ -10,8 +39,11 @@ function down(event) {
     <div class="poster">
       <!--      海报背景-->
       <div id="bgWrap">
-        <video id="bg" autoplay class="poster__bg" jm_neat="1128228866" loop="loop"
-               poster="../assets/images/poster/2.png" style="opacity: 1; width: 100%; max-height: calc(100vh - 6.5rem);">
+        <div ref="volume" class="volume" @click="playVideo">
+          <IconVolumeOn/>
+        </div>
+        <video id="bg" ref="video" autoplay class="poster__bg" loop="loop"
+               poster="../assets/images/poster/2.png">
           <source src="../assets/images/poster/poster.mp4" type="audio/mp4">
           您的浏览器不支持播放此视频.
         </video>
@@ -25,8 +57,27 @@ function down(event) {
 
 #bg {
   object-fit: cover;
+  opacity: 1;
+  width: 100%;
+  max-height: calc(100vh - 6.5rem);
 }
 
+#bgWrap {
+  position: relative;
+}
+
+.volume {
+  width: 36px;
+  height: 36px;
+  background-color: #fff;
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  border-radius: 50%;
+  z-index: 2;
+
+
+}
 
 
 </style>
