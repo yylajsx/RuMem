@@ -8,7 +8,7 @@ import {reactive, ref, watchEffect} from "vue";
 
 let bgShow = ref(true)
 const style = reactive({
-  background: 'var(--bg-200)',
+  background: 'var(--bg-500)',
 })
 
 const route = useRoute()
@@ -23,7 +23,6 @@ watchEffect(() => {
   }
 
 })
-
 
 </script>
 
@@ -40,8 +39,6 @@ watchEffect(() => {
           <component :is="Component"></component>
         </Transition>
       </RouterView>
-
-
     </main>
     <SmallTools/>
     <Footer :style="style"></Footer>
@@ -56,11 +53,9 @@ watchEffect(() => {
   z-index: 10;
 }
 
-header{
+header {
   width: auto;
-  height:auto;
-  //background-color: var(--bg-200);
-  //background-color: transparent;
+  height: auto;
   border-bottom: 1px solid var(--bg-300);
   position: sticky;
   top: 0;
@@ -74,22 +69,22 @@ header{
   }
 }
 
-main{
+main {
   width: auto;
   min-height: calc(100vh - 6.5rem);
   overflow: hidden;
   //padding: 0.62rem 5rem;
   padding: 0.62rem 0;
 }
+
 .route-enter-active,
 .route-leave-active {
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 }
 
 .route-enter-from,
 .route-leave-to {
   opacity: 0;
-
 }
 
 </style>
