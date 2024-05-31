@@ -2,7 +2,9 @@
 
 @media (max-width: 768px) {
     html {
-        background-color: #ffffff;
-        color: var(--text-300);
+        /*background-color: #ffffff;*/
+        /*color: var(--text-300);*/
+        color: var(--text-000);
+        background-color: var(--bg-500);
     }
 }
