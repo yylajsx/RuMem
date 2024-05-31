@@ -71,7 +71,7 @@ header {
 
 main {
   width: auto;
-  min-height: calc(100vh - 6.5rem);
+  //min-height: calc(100vh - 6.5rem);
   overflow: hidden;
   //padding: 0.62rem 5rem;
   padding: 0.62rem 0;
