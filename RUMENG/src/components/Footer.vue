@@ -14,7 +14,7 @@
         <li><a href="#" target="_blank">隐私政策</a></li>
         <li><a href="#" target="_blank">服务条款</a></li>
         <li><a href="#" target="_blank">cookie设置</a></li>
-        <li><a href="https://beian.miit.gov.cn/" target="_blank">琼ICP备202300001号</a></li>
+        <li><a href="https://beian.miit.gov.cn/" target="_blank">测ICP备202300001号</a></li>
       </ul>
     </div>
   </div>

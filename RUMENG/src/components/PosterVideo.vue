@@ -1,4 +1,7 @@
 <script setup>
+
+import {onMounted, ref} from "vue";
+
 const video = ref()
 const volume = ref()
 
@@ -49,7 +52,11 @@ function pauseVideo() {
 </template>
 
 <style scoped>
+.poster {
+  width: 50%;
+}
 #bgWrap {
+  width: 100%;
   position: relative;
 }
 
