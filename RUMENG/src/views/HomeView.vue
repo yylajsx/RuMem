@@ -17,7 +17,7 @@ import PosterVideo from "@/components/PosterVideo.vue";
   min-height: calc(100vh - 6.5rem);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  //justify-content: center;
   align-items: center;
 }
 
