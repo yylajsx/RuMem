@@ -19,3 +19,4 @@ import Error from "@/components/Error.vue";
   align-items: center;
 }
 </style>
+

@@ -1,6 +1,7 @@
 <script setup>
 
 import {onMounted, ref} from "vue";
+import IconVolumeOn from "@/components/icons/IconVolumeOn.vue";
 
 const video = ref()
 const volume = ref()

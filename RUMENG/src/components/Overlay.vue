@@ -1,7 +1,11 @@
 <!-- Overlay.vue -->
 <!--遮罩层-->
 <template>
-  <div v-if="isVisible" class="overlay" @click="close"></div>
+  <div v-if="isVisible" class="overlay" @click="close">
+    <!-- 这里可以放置内容，例如加载动画或提示信息 -->
+    <!-- 例如：<div class="loading-spinner">Loading...</div> -->
+    <!-- 例如：<p>点击遮罩层关闭</p> -->
+  </div>
 </template>
 
 <script setup>
