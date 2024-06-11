@@ -9,6 +9,14 @@ let logoSrc = ref("/logo.png")
 let tabs = ref([{tab: "Games", link: "/"}, {tab: "Newswire", link: "/newswire"}, {tab: "Downloads", link: "/downloads"}
   , {tab: "Store", link: "/store"}, {tab: "Support", link: "/support"}])
 
+function showInf() {
+  let item = localStorage.getItem("token");
+  // 未登录处理
+  if (!item) {
+
+  }
+}
+
 </script>
 
 <template>
@@ -36,7 +44,7 @@ let tabs = ref([{tab: "Games", link: "/"}, {tab: "Newswire", link: "/newswire"},
         <!--        </div>-->
       </div>
       <div class="action">
-        <AvatarIcon/>
+        <AvatarIcon @click="showInf"/>
       </div>
     </div>
   </div>
