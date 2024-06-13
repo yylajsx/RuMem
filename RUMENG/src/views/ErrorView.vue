@@ -1,11 +1,11 @@
 <script setup>
 import {ref} from "vue";
 
-let cmds = ref(["You don't exist. ", "Go away.", "|"])
-let cmd = ref();
-
+let cmd = ref("");
+let cmds = ref(["You don't exist. ", "Go away."])
 function submit() {
-  cmds.value.splice(-1, 0, cmd.value)
+  cmds.value.push(cmd.value)
+
   if (cmds.value.length > 10) {
     cmds.value.splice(0, 1);
   }
@@ -15,6 +15,10 @@ function submit() {
 function isLastElement(index) {
   return index === cmds.value.length - 1;
 }
+
+// watch(() => cmd.value, (newValue) => {
+//   cmds.value.splice(-1, 0, cmd.value)
+// })
 </script>
 
 <template>
@@ -91,7 +95,8 @@ function isLastElement(index) {
 
 }
 
-.last-element {
+.last-element::after {
+  content: '|';
   -webkit-animation: cursor 1s infinite normal linear;
   animation: cursor 1s infinite normal linear;
 }
@@ -119,21 +124,12 @@ function isLastElement(index) {
 .cmd-input input {
   //width: 100%;
   outline-style: none;
-  border: 1px solid #c0c4cc;
-  border-radius: 5px;
+  border: none;
   width: 100%;
   height: 100%;
   padding: 8px;
-  box-sizing: border-box;
-
-  &:focus {
-    border-color: #f07b00;
-    outline: 0;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
-    #f07b00;
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
-    #f07b00;
-  }
+  background: transparent;
+  color: var(--text-000);
 }
 </style>
 

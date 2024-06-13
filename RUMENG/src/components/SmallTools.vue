@@ -1,7 +1,5 @@
 <script setup>
 
-import IconPageUp from "@/components/icons/IconPageUp.vue";
-import IconCallme from "@/components/icons/IconCallme.vue";
 import {computed, onMounted, onUnmounted, ref} from "vue";
 
 let scrollY = ref(0);
@@ -29,10 +27,10 @@ onUnmounted(() => {
 <template>
   <div class="container" v-if="show">
     <div class="wrapper">
-      <IconPageUp @click="scrollToTop"/>
+      <svg-icon name="PageUp" @click="scrollToTop"/>
     </div>
     <div class="wrapper">
-      <IconCallme @pointerdown="console.log('17745214589')"/>
+      <svg-icon name="Callme" @pointerdown="console.log('17745214589')"/>
     </div>
   </div>
 </template>

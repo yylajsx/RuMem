@@ -1,7 +1,8 @@
 <script setup>
 
 import {onMounted, ref} from "vue";
-import IconVolumeOn from "@/components/icons/IconVolumeOn.vue";
+import SvgIcon from "@/components/SvgIcon.vue";
+
 
 const video = ref()
 const volume = ref()
@@ -41,7 +42,7 @@ function pauseVideo() {
     <!--      海报背景-->
     <div id="bgWrap">
       <div ref="volume" class="volume" @click="playVideo">
-        <IconVolumeOn/>
+        <svg-icon color="blue" name="VolumeOn"></svg-icon>
       </div>
       <video id="bg" ref="video" autoplay class="poster__bg" loop="loop"
              poster="../assets/images/poster/2.png">

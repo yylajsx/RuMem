@@ -1,6 +1,4 @@
 <script setup>
-import BarsIcon from "@/components/icons/IconBars.vue";
-import AvatarIcon from "@/components/icons/IconAvatar.vue";
 import {ref} from "vue";
 
 // let logoSrc = ref("src/assets/images/logo.png")
@@ -36,15 +34,10 @@ function showInf() {
     </div>
     <div class="actions">
       <div class="action">
-        <BarsIcon/>
-        <!--        <div class="dropdown-content">-->
-        <!--          <a href="#">HTML</a>-->
-        <!--          <a href="#">CSS</a>-->
-        <!--          <a href="#">Bootstrap</a>-->
-        <!--        </div>-->
+        <svg-icon name="Bars"></svg-icon>
       </div>
       <div class="action">
-        <AvatarIcon @click="showInf"/>
+        <svg-icon name="Avatar" @click="showInf"></svg-icon>
       </div>
     </div>
   </div>

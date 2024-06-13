@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host --open",
     "build": "vite build",
     "preview": "vite preview"
   },
@@ -15,8 +15,10 @@
     "vue-router": "^4.3.0"
   },
   "devDependencies": {
+    "fast-glob": "^3.3.2",
     "@vitejs/plugin-vue": "^5.0.4",
     "vite": "^5.2.8",
+    "vite-plugin-svg-icons": "^2.0.1",
     "vite-plugin-vue-devtools": "^7.0.25"
   }
 }
