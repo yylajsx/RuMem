@@ -52,7 +52,8 @@ onUnmounted(() => {
 .wrapper {
   width: 100%;
   height: auto;
-  background-color: transparent;
+  //background-color: transparent;
+  background-color: var(--bg-000);
   border: 1px black solid;
   border-radius: 0.75rem;
   display: flex;

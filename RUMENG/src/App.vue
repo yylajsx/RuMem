@@ -4,7 +4,8 @@ import VideoBackground from "@/components/VideoBackground.vue";
 import SmallTools from "@/components/SmallTools.vue";
 import Footer from "@/components/Footer.vue";
 import {RouterView, useRoute} from 'vue-router'
-import {computed, reactive, ref, watchEffect} from "vue";
+import {reactive, ref, watchEffect} from "vue";
+
 
 let bgShow = ref(true)
 const style = reactive({
@@ -24,14 +25,11 @@ watchEffect(() => {
 
 })
 
-const key = computed(() => {
-  return route.path + Math.random();
-});
 
 </script>
 
 <template>
-  <!--  <Overlay/>-->
+
   <!--  首屏动画背景-->
   <VideoBackground v-show="bgShow"/>
   <div id="context">
