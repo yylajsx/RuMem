@@ -1,7 +1,7 @@
 <!-- Overlay.vue -->
 <!--遮罩层-->
 <template>
-  <div v-if="isVisible" class="overlay">
+  <div v-if="show" class="overlay">
     <div class="closeBtn" @click="close"></div>
     <div class="main-context">
       <slot></slot>
@@ -10,13 +10,17 @@
 </template>
 
 <script setup>
+defineProps({
+  show: {
+    type: Boolean,
+    default: false
+  }
+})
 import {ref} from 'vue';
-
-const isVisible = ref(true);
 
 // 关闭遮罩层
 function close() {
-  isVisible.value = false;
+  // this.show = false;
   move();
 }
 
