@@ -1,50 +1,45 @@
 <!-- Overlay.vue -->
 <!--遮罩层-->
 <template>
-  <div v-if="show" class="overlay">
-    <div class="closeBtn" @click="close"></div>
-    <div class="main-context">
-      <slot></slot>
+  <Teleport to="body">
+    <div v-if="modelValue" class="overlay">
+      <!--    关闭遮罩层按钮-->
+      <div class="closeBtn" @click="close"></div>
+      <!--    遮罩层内容-->
+      <div class="main-context">
+        <slot></slot>
+      </div>
     </div>
-  </div>
+  </Teleport>
 </template>
 
 <script setup>
-defineProps({
-  show: {
+
+let props = defineProps({
+  modelValue: {
     type: Boolean,
     default: false
+  },
+  pageLocation: {
+    type: Number,
+    default: 0
   }
 })
-import {ref} from 'vue';
+
+let emits = defineEmits(['update:modelValue'])
 
 // 关闭遮罩层
 function close() {
-  // this.show = false;
+  emits('update:modelValue', false)
   move();
 }
-
-// 更新遮罩层状态
-function updateVisible(newVisible) {
-  isVisible.value = newVisible;
-}
-
-// 记录页面滚动位置
-const pageLocation = ref('');
-
-// 禁止滚动-在显示遮罩层的时候调用
-function stop(e) {
-  let scrollTop = window.scrollY;//滚动的高度；
-  pageLocation.value = scrollTop;
-  document.body.style.position = 'fixed';
-  document.body.style.top = '-' + scrollTop + 'px';
-};
 
 // 取消滑动限制-在关闭遮罩层的时候调用
 function move() {
   document.body.style.position = 'static';
-  window.scrollTo(0, pageLocation.value);
+  window.scrollTo(0, props.pageLocation);
 }
+
 </script>
 
 <style scoped>

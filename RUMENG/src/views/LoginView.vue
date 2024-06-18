@@ -1,20 +1,9 @@
 <script setup>
-import Overlay from "@/components/Overlay.vue";
 
-let isLoggedIn = false;
-
-function openModal() {
-  isLoggedIn = true;
-}
-
-function closeModal() {
-  isLoggedIn = false;
-}
 </script>
 
 <template>
   <div class="login-container">
-    <Overlay>
       <div class="login-box">
         <h1>登录</h1>
         <form>
@@ -29,7 +18,6 @@ function closeModal() {
           <button type="submit">登录</button>
         </form>
       </div>
-    </Overlay>
 
   </div>
 </template>

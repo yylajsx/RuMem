@@ -25,13 +25,11 @@ watchEffect(() => {
 
 })
 
-// let showOverlay =ref(true)
 
 
 </script>
 
 <template>
-  <!--  <Overlay v-model:show="showOverlay"/>-->
   <!--  首屏动画背景-->
   <VideoBackground v-show="bgShow"/>
   <div id="context">
