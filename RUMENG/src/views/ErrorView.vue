@@ -12,9 +12,9 @@ function submit() {
   cmd.value = ""
 }
 
-function isLastElement(index) {
-  return index === cmds.value.length - 1;
-}
+// function isLastElement(index) {
+//   return index === cmds.value.length - 1;
+// }
 
 // watch(() => cmd.value, (newValue) => {
 //   cmds.value.splice(-1, 0, cmd.value)
@@ -30,7 +30,8 @@ function isLastElement(index) {
       <hr/>
       <div class="cmd">
         <span v-for="(item,index) in cmds" :key="index">
-          &gt;_ <span :class="{'last-element': isLastElement(index)}">{{ item }}</span>
+<!--          &gt;_ <span :class="{'last-element': isLastElement(index)}">{{ item }}</span>-->
+          &gt;_ <span>{{ item }}</span>
           <br/>
         </span>
       </div>
@@ -57,6 +58,7 @@ function isLastElement(index) {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 
 }
 

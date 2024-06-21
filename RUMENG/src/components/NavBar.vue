@@ -1,6 +1,7 @@
 <script setup>
 import {ref} from "vue";
 import Overlay from "@/components/Overlay.vue";
+import LoginView from "@/views/LoginView.vue";
 
 // let logoSrc = ref("src/assets/images/logo.png")
 let logoSrc = ref("/logo.png")
@@ -62,7 +63,7 @@ function stop(e) {
         <!--        <Overlay :show="showOverlay" @updateStates="update">-->
         <!--        <Overlay :modelValue="showOverlay" @update:modelValue="update">-->
         <Overlay v-model="showOverlay" :pageLocation="pageLocation">
-          <h1>hello</h1>
+          <LoginView/>
         </Overlay>
       </div>
     </div>

@@ -1,11 +1,11 @@
 <script setup>
-import PosterVideo from "@/components/PosterVideo.vue";
+// import PosterVideo from "@/components/PosterVideo.vue";
 </script>
 
 <template>
   <div class="home">
     <h1>Welcome to the Movie App</h1>
-    <PosterVideo/>
+    <!--    <PosterVideo/>-->
   </div>
 </template>
 
